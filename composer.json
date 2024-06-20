@@ -1,0 +1,43 @@
+{
+    "name": "yii2mod/yii2-comments",
+    "description": "Comments module for Yii2",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "yii2-comments",
+        "yii2-comments-module",
+        "yii2-manage-comments"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Chepurnoy",
+            "email": "igorzfort@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "yiisoft/yii2": ">=2.0.8",
+        "yii2mod/yii2-behaviors": "*",
+        "yii2mod/yii2-enum": "*",
+        "yii2mod/yii2-moderation": "*",
+        "yii2mod/yii2-editable": "*",
+        "asofter/yii2-imperavi-redactor": "*",
+        "paulzi/yii2-adjacency-list": "^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "~2.0",
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "yii2mod\\comments\\": ""
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
