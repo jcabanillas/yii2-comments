@@ -1,5 +1,5 @@
 {
-    "name": "yii2mod/yii2-comments",
+    "name": "jcabanillas/yii2-comments",
     "description": "Comments module for Yii2",
     "type": "yii2-extension",
     "keywords": [
@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yii2mod\\comments\\": ""
+            "jcabanillas\\comments\\": ""
         }
     },
     "repositories": [

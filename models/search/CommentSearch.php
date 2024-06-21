@@ -1,14 +1,14 @@
 <?php
 
-namespace yii2mod\comments\models\search;
+namespace jcabanillas\comments\models\search;
 
 use yii\data\ActiveDataProvider;
-use yii2mod\comments\models\CommentModel;
+use jcabanillas\comments\models\CommentModel;
 
 /**
  * Class CommentSearch
  *
- * @package yii2mod\comments\models\search
+ * @package jcabanillas\comments\models\search
  */
 class CommentSearch extends CommentModel
 {

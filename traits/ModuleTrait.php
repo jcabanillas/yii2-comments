@@ -1,14 +1,14 @@
 <?php
 
-namespace yii2mod\comments\traits;
+namespace jcabanillas\comments\traits;
 
 use Yii;
-use yii2mod\comments\Module;
+use jcabanillas\comments\Module;
 
 /**
  * Class ModuleTrait
  *
- * @package yii2mod\comments\traits
+ * @package jcabanillas\comments\traits
  */
 trait ModuleTrait
 {

@@ -1,17 +1,17 @@
 <?php
 
-namespace yii2mod\comments\controllers;
+namespace jcabanillas\comments\controllers;
 
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii2mod\comments\models\CommentModel;
-use yii2mod\comments\traits\ModuleTrait;
+use jcabanillas\comments\models\CommentModel;
+use jcabanillas\comments\traits\ModuleTrait;
 
 /**
  * Class ManageController
  *
- * @package yii2mod\comments\controllers
+ * @package jcabanillas\comments\controllers
  */
 class ManageController extends Controller
 {
@@ -20,17 +20,17 @@ class ManageController extends Controller
     /**
      * @var string path to index view file, which is used in admin panel
      */
-    public $indexView = '@vendor/yii2mod/yii2-comments/views/manage/index';
+    public $indexView = '@vendor/jcabanillas/yii2-comments/views/manage/index';
 
     /**
      * @var string path to update view file, which is used in admin panel
      */
-    public $updateView = '@vendor/yii2mod/yii2-comments/views/manage/update';
+    public $updateView = '@vendor/jcabanillas/yii2-comments/views/manage/update';
 
     /**
      * @var string search class name for searching
      */
-    public $searchClass = 'yii2mod\comments\models\search\CommentSearch';
+    public $searchClass = 'jcabanillas\comments\models\search\CommentSearch';
 
     /**
      * @var array verb filter config
@@ -100,7 +100,7 @@ class ManageController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->session->setFlash('success', Yii::t('yii2mod.comments', 'Comment has been saved.'));
+            Yii::$app->session->setFlash('success', Yii::t('jcabanillas.comments', 'Comment has been saved.'));
 
             return $this->redirect(['index']);
         }
@@ -122,7 +122,7 @@ class ManageController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->deleteWithChildren();
-        Yii::$app->session->setFlash('success', Yii::t('yii2mod.comments', 'Comment has been deleted.'));
+        Yii::$app->session->setFlash('success', Yii::t('jcabanillas.comments', 'Comment has been deleted.'));
 
         return $this->redirect(['index']);
     }
@@ -145,7 +145,7 @@ class ManageController extends Controller
         if (null !== ($model = $commentModel::findOne($id))) {
             return $model;
         } else {
-            throw new NotFoundHttpException(Yii::t('yii2mod.comments', 'The requested page does not exist.'));
+            throw new NotFoundHttpException(Yii::t('jcabanillas.comments', 'The requested page does not exist.'));
         }
     }
 }

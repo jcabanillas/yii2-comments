@@ -5,7 +5,7 @@ use yii\widgets\ListView;
 use yii\widgets\Pjax;
 
 /* @var $this \yii\web\View */
-/* @var $commentModel \yii2mod\comments\models\CommentModel */
+/* @var $commentModel \jcabanillas\comments\models\CommentModel */
 /* @var $maxLevel null|integer comments max level */
 /* @var $encryptedEntity string */
 /* @var $pjaxContainerId string */
@@ -20,7 +20,7 @@ use yii\widgets\Pjax;
         <div class="col-md-12 col-sm-12">
             <div class="title-block clearfix">
                 <h3 class="h3-body-title">
-                    <?php echo Yii::t('yii2mod.comments', 'Comments ({0})', $commentModel->getCommentsCount()); ?>
+                    <?php echo Yii::t('jcabanillas.comments', 'Comments ({0})', $commentModel->getCommentsCount()); ?>
                 </h3>
                 <div class="title-separator"></div>
             </div>

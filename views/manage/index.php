@@ -4,14 +4,14 @@ use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\helpers\StringHelper;
 use yii\widgets\Pjax;
-use yii2mod\moderation\enums\Status;
+use jcabanillas\moderation\enums\Status;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-/* @var $searchModel \yii2mod\comments\models\search\CommentSearch */
-/* @var $commentModel \yii2mod\comments\models\CommentModel */
+/* @var $searchModel \jcabanillas\comments\models\search\CommentSearch */
+/* @var $commentModel \jcabanillas\comments\models\CommentModel */
 
-$this->title = Yii::t('yii2mod.comments', 'Comments Management');
+$this->title = Yii::t('jcabanillas.comments', 'Comments Management');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="comments-index">
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $model->getAuthorName();
                 },
                 'filter' => $commentModel::getAuthors(),
-                'filterInputOptions' => ['prompt' => Yii::t('yii2mod.comments', 'Select Author'), 'class' => 'form-control'],
+                'filterInputOptions' => ['prompt' => Yii::t('jcabanillas.comments', 'Select Author'), 'class' => 'form-control'],
             ],
             [
                 'attribute' => 'status',
@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Status::getLabel($model->status);
                 },
                 'filter' => Status::listData(),
-                'filterInputOptions' => ['prompt' => Yii::t('yii2mod.comments', 'Select Status'), 'class' => 'form-control'],
+                'filterInputOptions' => ['prompt' => Yii::t('jcabanillas.comments', 'Select Status'), 'class' => 'form-control'],
             ],
             [
                 'attribute' => 'createdAt',
@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'template' => '{view}{update}{delete}',
                 'buttons' => [
                     'view' => function ($url, $model, $key) {
-                        $title = Yii::t('yii2mod.comments', 'View');
+                        $title = Yii::t('jcabanillas.comments', 'View');
                         $options = [
                             'title' => $title,
                             'aria-label' => $title,
